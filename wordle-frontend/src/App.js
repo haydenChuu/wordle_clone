@@ -574,7 +574,8 @@ const App = () => {
     if (gameState !== 'playing') return;
     if (key === 'BACKSPACE') {
       setCurrentGuess(prev => prev.slice(0, -1));
-    } else if (key === 'ENTER') {
+    } 
+    else if (key === 'ENTER') {
       handleSubmitGuess();
     } else if (key.length === 1 && key >= 'A' && key <= 'Z') {
       if (currentGuess.length < 5) {
