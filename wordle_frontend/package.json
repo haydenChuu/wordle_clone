@@ -1,53 +1,39 @@
 {
+  "name": "wordle_frontend",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "deploy": "surge ./public --domain wordle-frontend.hayden.surge.sh",
-    "start": "webpack-dev-server",
-    "prebuild": "rm -f public/index.html public/app-*.js public/vendor-*.js public/screen-*.css",
-    "build": "NODE_ENV=production webpack --progress",
-    "postbuild": "cp public/index.html public/200.html",
-    "predeploy": "yarn build"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.22",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^10.0.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "browser-sync": "^3.0.4",
-    "browser-sync-webpack-plugin": "^2.4.0",
-    "css-loader": "^7.1.2",
-    "eslint": "^9.39.1",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-config-standard-react": "^13.0.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-standard": "^5.0.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.5",
-    "node-sass": "^9.0.0",
-    "postcss-loader": "^8.2.0",
-    "raw-loader": "^4.0.2",
-    "sass-loader": "^16.0.6",
-    "style-loader": "^4.0.0",
-    "stylelint": "^16.25.0",
-    "stylelint-config-standard": "^39.0.1",
-    "surge": "^0.24.6",
-    "webpack": "^5.103.0",
-    "webpack-dev-server": "^5.2.2",
-    "webpack-merge": "^6.0.1"
-  },
   "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-hot-loader": "^4.5.3",
-    "redbox-react": "^1.6.0",
-    "whatwg-fetch": "^3.6.20"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
